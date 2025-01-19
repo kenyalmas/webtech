@@ -12,28 +12,32 @@
 -->
 
 <html>
+
 <head>
-	<title>Wage Report</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Wage Report</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>WAGE REPORT</h1>
+    <h1>WAGE REPORT</h1>
 
-	<?php
-		$hourlyWage = 10.75;
-		$hoursWorked = 20;
-		$wage = $hourlyWage * $hoursWorked;
+    <?php
+    $hourlyWage = 10.75;
+    $hoursWorked = 20;
+    $wage = $hourlyWage * $hoursWorked;
 
-		if ($hoursWorked > 40)
+    if ($hoursWorked > 40) {
 
-			print("<p>Since you worked more than 40 hours you also get a $100 bonus.</p>");
-			$wage = $wage + 100;
+        print("<p>Since you worked more than 40 hours you also get a $100 bonus.</p>");
+        $wage = $wage + 100;
+    }
 
-		print("<p>Your hourly wage is $ $hourlyWage and you worked
+    print("<p>Your hourly wage is $ $hourlyWage and you worked
 		$hoursWorked hours.</p>");
-		print("<p>Your wages are $ $wage.</p>");
+    print("<p>Your wages are $ $wage.</p>");
 
 
-	?>
+    ?>
 </body>
+
 </html>

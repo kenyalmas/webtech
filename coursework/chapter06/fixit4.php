@@ -11,29 +11,31 @@
 -->
 
 <html>
+
 <head>
-	<title>Wage Report</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Wage Report</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>WAGE REPORT</h1>
+    <h1>WAGE REPORT</h1>
 
-	<?php
-		$wageFile = fopen("wages1.txt","r");//  open the file containing employee wages
-		fclose($wageFile);
-		$wage1 = trim(fgets($wageFile));	// reads data for the 1st employee from the file
-		$wage2 = trim(fgets($wageFile));	// reads data for the 2nd employee from the file
-		$wage3 = trim(fgets($wageFile));	// reads data for the 3rd employee from the file
+    <?php
+    $wageFile = fopen("wages1.txt", "r"); //  open the file containing employee wages
+    $wage1 = trim(fgets($wageFile));    // reads data for the 1st employee from the file
+    $wage2 = trim(fgets($wageFile));    // reads data for the 2nd employee from the file
+    $wage3 = trim(fgets($wageFile));    // reads data for the 3rd employee from the file
+    fclose($wageFile);
 
+    $totalWages = $wage1 + $wage2 + $wage3;
+    $avgWage = $totalWages / 3;
 
-		$totalWages = $wage1 + $wage2 + $wage3;
-		$avgWage = $totalWages/3;
-
-		print("<p>Wage #1: $$wage1<br>");
-		print("Wage #2: $$wage2<br>");
-		print("Wage #3: $$wage3</p>");
-		print("<p>TOTAL WAGES PAID: $$totalWages</p>");
-		print("<p>AVERAGE WAGE:     $$avgWage</p>");
-	?>
+    print("<p>Wage #1: $$wage1<br>");
+    print("Wage #2: $$wage2<br>");
+    print("Wage #3: $$wage3</p>");
+    print("<p>TOTAL WAGES PAID: $$totalWages</p>");
+    print("<p>AVERAGE WAGE:     $$avgWage</p>");
+    ?>
 </body>
+
 </html>

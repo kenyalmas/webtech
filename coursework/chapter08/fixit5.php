@@ -12,34 +12,36 @@
 -->
 
 <html>
+
 <head>
-	<title>Wage Report</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Wage Report</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>WAGE REPORT</h1>
+    <h1>WAGE REPORT</h1>
 
-	<?php
-		$hourlyWage = 10.75;
-		$hoursWorked = -1;
-		$wage = $hourlyWage * $hoursWorked;
+    <?php
+    $hourlyWage = 10.75;
+    $hoursWorked = -1;
+    $wage = $hourlyWage * $hoursWorked;
 
-		if ($hoursWorked < 0)
-			print("<p><h1>ERROR: You can't work negative hours!</h1></p>");
+    if ($hoursWorked < 0)
+        print("<p><h1>ERROR: You can't work negative hours!</h1></p>");
+    break;
 
-		if ($hoursWorked > 40 and $hourlyWage < 8.00)
-		{
-			print("<p>You get a $100 bonus.</p>");
-			$wage = $wage + 100;
-		}
-		else
-			print("<p>No bonus this week</p>");
+    if ($hoursWorked > 40 and $hourlyWage < 8.00) {
+        print("<p>You get a $100 bonus.</p>");
+        $wage = $wage + 100;
+    } else
+        print("<p>No bonus this week</p>");
 
-		print("<p>Your hourly wage is $ $hourlyWage and you worked
+    print("<p>Your hourly wage is $ $hourlyWage and you worked
 		$hoursWorked hours.</p>");
-		print("<p>Your wages are $ $wage.</p>");
+    print("<p>Your wages are $ $wage.</p>");
 
 
-	?>
+    ?>
 </body>
+
 </html>

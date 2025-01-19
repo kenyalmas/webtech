@@ -25,20 +25,24 @@
 
 
 <html>
+
 <head>
-	<title>Modify1</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify1</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify1</h1>
+    <h1>Modify1</h1>
 
-	<?php
-		$age = $_POST['age'];
-		$yearsToRetire = 65 - $age;
+    <?php
+    $age = $_POST['age'];
+    $yearsToRetire = 65 - $age;
+    $yearsWorked = $age - 18;
 
-		print("<p>Your age is $age. You have $yearsToRetire years until retirement.</p>");
-	?>
+    print("<p>Your age is $age. You have $yearsToRetire years until retirement. You have been working for $yearsWorked years.</p>");
+    ?>
 
 </body>
+
 </html>

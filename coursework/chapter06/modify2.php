@@ -19,24 +19,29 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify2</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify2</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify2</h1>
+    <h1>Modify2</h1>
 
-	<?php
-		$capitalFile = fopen("capital-info.txt","r");	// open the file for read operations
-		$countryRecord1 = trim(fgets($capitalFile));			// read a line from the file
-		fclose($capitalFile);
+    <?php
+    $capitalFile = fopen("capital-info.txt", "r");    // open the file for read operations
+    for ($i = 0; $i < 4; $i++) {
+        $countryRecord1 = trim(fgets($capitalFile));            // read a line from the file
 
-		list ($country1, $capital1) = explode(":", $countryRecord1);
+        list($country1, $capital1) = explode(":", $countryRecord1);
 
-		print("<p>$capital1 is the capital city of $country1.</p>");
+        print("<p>$capital1 is the capital city of $country1.</p>");
+    }
 
-	?>
+    fclose($capitalFile);
+    ?>
 
 </body>
+
 </html>

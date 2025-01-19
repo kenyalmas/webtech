@@ -15,33 +15,36 @@
 -->
 
 <html>
+
 <head>
-	<title>Wage Report</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Wage Report</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>WAGE REPORT</h1>
+    <h1>WAGE REPORT</h1>
 
-	<?php
-		$wageFile = fopen("wages2.txt","r");	// open the file containing employee wages
+    <?php
+    $wageFile = fopen("wages2.txt", "r");    // open the file containing employee wages
 
-		$employee1 = trim(fgets($wageFile));	// reads data for the 1st employee from the file
-		$employee2 = trim(fgets($wageFile));	// reads data for the 1st employee from the file
-		$employee3 = trim(fgets($wageFile));	// reads data for the 1st employee from the file
-		fclose($wageFile);
+    $employee1 = trim(fgets($wageFile));    // reads data for the 1st employee from the file
+    $employee2 = trim(fgets($wageFile));    // reads data for the 1st employee from the file
+    $employee3 = trim(fgets($wageFile));    // reads data for the 1st employee from the file
+    fclose($wageFile);
 
-		list($firstName1, $lastName1, $wage1) = explode(":", $employee1);
-		list($firstName2, $lastName2, $wage2) = explode(":", $employee2);
-		list($firstName3, $lastName3, $wage3) = explode(":", $employee3);
+    list($firstName1, $lastName1, $wage1) = explode(",", $employee1);
+    list($firstName2, $lastName2, $wage2) = explode(",", $employee2);
+    list($firstName3, $lastName3, $wage3) = explode(",", $employee3);
 
-		$totalWages = $wage1 + $wage2 + $wage3;
-		$avgWage = $totalWages/3;
+    $totalWages = $wage1 + $wage2 + $wage3;
+    $avgWage = $totalWages / 3;
 
-		print("<p>$lastName1, $firstName1: $$wage1<br>");
-		print("$lastName2, $firstName2: $$wage2<br>");
-		print("$lastName3, $firstName3: $$wage3</p>");
-		print("<p>TOTAL WAGES PAID: $$totalWages</p>");
-		print("<p>AVERAGE WAGE:     $$avgWage</p>");
-	?>
+    print("<p>$lastName1, $firstName1: $$wage1<br>");
+    print("$lastName2, $firstName2: $$wage2<br>");
+    print("$lastName3, $firstName3: $$wage3</p>");
+    print("<p>TOTAL WAGES PAID: $$totalWages</p>");
+    print("<p>AVERAGE WAGE:     $$avgWage</p>");
+    ?>
 </body>
+
 </html>

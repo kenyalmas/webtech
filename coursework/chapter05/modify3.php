@@ -23,20 +23,26 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify3</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify3</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify3</h1>
+    <h1>Modify3</h1>
 
-	<?php
-		$adultTickets = $_POST['adultTickets'];
-		$totalCost = $adultTickets * 6.50;
-		print("<p>You ordered $adultTickets adult tickets</p>");
-		print("<p>Your cost is $$totalCost.</p>");
-	?>
+    <?php
+    $adultTickets = $_POST['adultTickets'];
+    $childTickets = $_POST['childTickets'];
+    $adultCost = $adultTickets * 6.50;
+    $childCost = $childTickets * 4.50;
+    $totalCost = $adultCost + $childCost;
+    print("<p>You ordered $adultTickets adult tickets and $childTickets children's tickets</p>");
+    print("<p>Your cost is $$totalCost.</p>");
+    ?>
 
 </body>
+
 </html>

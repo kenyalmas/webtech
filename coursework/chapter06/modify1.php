@@ -27,26 +27,29 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify1</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify1</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify1</h1>
+    <h1>Modify1</h1>
 
-	<?php
-		$country = $_POST['country'];
-		$capitalCity = $_POST['capitalCity'];
+    <?php
+    $country = $_POST['country'];
+    $capitalCity = $_POST['capitalCity'];
 
-		$capitalFile = fopen("capitals.txt","w");	// open the file for write operations
+    $capitalFile = fopen("capitals.txt", "a");    // open the file for write operations
 
-		fputs($capitalFile, "$country:$capitalCity\n");// write the input to the file
-		fclose($capitalFile);
+    fputs($capitalFile, "$country:$capitalCity\n"); // write the input to the file
+    fclose($capitalFile);
 
-		print("<p>The following information has been stored in the file capitals.txt:</p>");
-		print("<p>$country:$capitalCity</p>");
-	?>
+    print("<p>The following information has been stored in the file capitals.txt:</p>");
+    print("<p>$country:$capitalCity</p>");
+    ?>
 
 </body>
+
 </html>

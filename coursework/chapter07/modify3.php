@@ -19,19 +19,26 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify3</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify3</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify3</h1>
+    <h1>Modify3</h1>
 
-	<?php
-		$capital = $_POST['capital'];
-		print("<p>You selected $capital.</p>");
-		print("<p>The capital of Egypt is Cairo.</p>");
-	?>
+    <?php
+    $capital = $_POST['capital'];
+    print("<p>You selected $capital.</p>");
+    if ($capital == "Cairo") {
+        print("<p>CORRECT - you know your geography!</p>");
+    } else {
+        print("<p>That is not correct. The capital of Egypt is Cairo.</p>");
+    }
+    ?>
 
 </body>
+
 </html>

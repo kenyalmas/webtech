@@ -14,32 +14,35 @@
 -->
 
 <html>
+
 <head>
-	<title>Wage Report</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Wage Report</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>WAGE REPORT</h1>
+    <h1>WAGE REPORT</h1>
 
-	<?php
-		$hourlyWage = 10.75;
-		$hoursWorked = 15;
-		$wage = $hourlyWage * $hoursWorked;
+    <?php
+    $hourlyWage = 10.75;
+    $hoursWorked = 15;
+    $wage = $hourlyWage * $hoursWorked;
 
-		if ($hoursWorked > 40)
-			$bonus = 100.00;
+    if ($hoursWorked > 40)
+        $bonus = 100.00;
 
-		if ($hoursWorked > 20)
-			$bonus = 50.00;
-		else
-			$bonus = 25.00;
+    elseif ($hoursWorked > 20)
+        $bonus = 50.00;
+    else
+        $bonus = 25.00;
 
-		print("<p>Your hourly wage is $ $hourlyWage and you worked
+    print("<p>Your hourly wage is $ $hourlyWage and you worked
 		$hoursWorked hours.</p>");
-		print("<p>Your wages are $ $wage.</p>");
-		print("<p>Your bonus is $ $bonus.</p>");
+    print("<p>Your wages are $ $wage.</p>");
+    print("<p>Your bonus is $ $bonus.</p>");
 
 
-	?>
+    ?>
 </body>
+
 </html>

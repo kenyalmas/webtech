@@ -20,24 +20,35 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify3</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify3</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify3</h1>
+    <h1>Modify3</h1>
 
-	<?php
-		$ticketFile = fopen("tickets.txt","r");	// open the file for read operations
-		$ticketOrder1 = trim(fgets($ticketFile));			// read a line from the file
-		fclose($ticketFile);
+    <?php
+    $ticketFile = fopen("tickets.txt", "r");    // open the file for read operations
+    $ticketOrder1 = trim(fgets($ticketFile));            // read a line from the file
+    $ticketOrder2 = trim(fgets($ticketFile));            // read a line from the file
+    $ticketOrder3 = trim(fgets($ticketFile));            // read a line from the file
+    fclose($ticketFile);
 
-		$ticketSale1 = $ticketOrder1 * 6.50;
+    $ticketSale1 = $ticketOrder1 * 6.50;
+    $ticketSale2 = $ticketOrder2 * 6.50;
+    $ticketSale3 = $ticketOrder3 * 6.50;
 
-		print("<p>TICKET SALE 1: $$ticketSale1</p>");
+    $ticketTotal = $ticketOrder1 + $ticketSale2 + $ticketSale3;
+    print("<p>TICKET SALE 1: $$ticketSale1</p>");
+    print("<p>TICKET SALE 2: $$ticketSale2</p>");
+    print("<p>TICKET SALE 3: $$ticketSale3</p>");
+    print("<p>TICKET TOTAL: $$ticketTotal</p>");
 
-	?>
+    ?>
 
 </body>
+
 </html>

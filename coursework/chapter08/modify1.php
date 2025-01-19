@@ -12,21 +12,27 @@
 		"<p>ERROR: You entered $age - that is out of range</p>"
 -->
 <html>
+
 <head>
-	<title>Modify1</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify1</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify1</h1>
+    <h1>Modify1</h1>
 
-	<?php
-		$age = $_POST['age'];
+    <?php
+    $age = $_POST['age'];
 
-		$yearsToRetire = 65 - $age;
-
-		print("<p>Your age is $age. You have $yearsToRetire years until retirement.</p>");
-	?>
+    $yearsToRetire = 65 - $age;
+    if ($age < 0 or $age > 65) {
+        print("<p>ERROR: You entered $age - that is out of range</p>");
+    } else {
+        print("<p>Your age is $age. You have $yearsToRetire years until retirement.</p>");
+    }
+    ?>
 
 </body>
+
 </html>

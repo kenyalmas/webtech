@@ -22,25 +22,28 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify4</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify4</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify4</h1>
+    <h1>Modify4</h1>
 
-	<?php
-		$purchaseAmount = $_POST['purchaseAmount'];
+    <?php
+    $purchaseAmount = $_POST['purchaseAmount'];
+    $discountedPrice = $purchaseAmount * 0.75;
+    $tax = $discountedPrice * 0.07;
+    $total = $tax + $discountedPrice;
 
-		$tax = $purchaseAmount * 0.07;
-		$total = $tax + $purchaseAmount;
+    print("<p>Purchase Amount: $$discountedPrice<br>");
+    print("Tax: $$tax<br>");
+    print("Total Cost: $$total</p>");
 
-		print("<p>Purchase Amount: $$purchaseAmount<br>");
-		print("Tax: $$tax<br>");
-		print("Total Cost: $$total</p>");
-
-	?>
+    ?>
 
 </body>
+
 </html>
