@@ -14,7 +14,7 @@ should: ask the user for their age; calculate the number of years they have
 left to retire (assume they retire at 65); display their age and years until
 they retire.
 
-calc-retirement.html algorithm::
+calc-retirement.html algorithm:
 
 	Prompt for age
 	Get age
