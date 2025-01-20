@@ -9,27 +9,34 @@
 	an associative array named $playerInfo and stores the values "Christine",
 	"Wizard", and 345 into elements named 'name', 'character', and 'score'.
 
-	Now modify the print statement so that it uses the $playerInfo array to 
+	Now modify the print statement so that it uses the $playerInfo array to
 	obtain the values for the second column of each row.
 
 	modify1.html does not need to be changed.
 -->
 <html>
+
 <head>
-	<title>Modify Exercise</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify Exercise</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>PLAYER REPORT</h1>
+    <h1>PLAYER REPORT</h1>
 
-	<?php
-	
-		print ("<table>");
-		print("<tr><td>Player Name</td><td>Christine</td></tr>");
-		print("<tr><td>Player Character</td><td>Wizard</td></tr>");
-		print("<tr><td>Player Score</td><td>345</td></tr>");
-		print ("</table>");
+    <?php
+    $playerName = "Christine";
+    $character = "Wizard";
+    $score = 345;
+    $playerInfo = array($playerName, $character, $score);
 
-	?>
+    print("<table>");
+    print("<tr><td>Player Name</td><td>$playerInfo[0]</td></tr>");
+    print("<tr><td>Player Character</td><td>$playerInfo[1]</td></tr>");
+    print("<tr><td>Player Score</td><td>$playerInfo[2]</td></tr>");
+    print("</table>");
+
+    ?>
 </body>
+
 </html>

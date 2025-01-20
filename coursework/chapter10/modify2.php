@@ -8,28 +8,31 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify2</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify2</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<?php
-		$highestSale = 0;
+    <?php
+    $highestSale = 0;
 
-		$salesFile = fopen("sales.txt", "r");
-		$nextSale = trim(fgets ($salesFile));
+    $salesFile = fopen("sales.txt", "r");
+    $nextSale = trim(fgets($salesFile));
 
-		while (!feof($salesFile) )
-		{
+    while (!feof($salesFile)) {
+        if ($highestSale < $nextSale)
+            $highestSale = $nextSale;
 
+        $nextSale = trim(fgets($salesFile));
+    }
+    fclose($salesFile);
 
-			$nextSale = trim(fgets ($salesFile));
-		}
-		fclose ($salesFile);
+    print("<p>HIGHEST SALE AMOUNT: $highestSale</p>");
 
-		print("<p>HIGHEST SALE AMOUNT: $highestSale</p>");
-
-	?>
+    ?>
 </body>
+
 </html>

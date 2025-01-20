@@ -14,29 +14,31 @@
 -->
 
 <html>
+
 <head>
-	<title>FixIt5</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>FixIt5</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<?php
-		print ("<h1>TIMESHEET REPORT</h1>");
+    <?php
+    print("<h1>TIMESHEET REPORT</h1>");
 
-		$timesheetFile = fopen("timesheets.txt", "r");
-		$nextTimesheet = trim(fgets($timesheetFile));
+    $timesheetFile = fopen("timesheets.txt", "r");
+    $nextTimesheet = trim(fgets($timesheetFile));
 
-		while (feof($timesheetFile) )
-		{
-			list ($firstName, $lastName, $hoursWorked, $hourlyRate) =
-				explode (":", $nextTimesheet);
-			if ($hoursWorked > 0)
-				print ("$lastName worked $hoursWorked  hours <br>");
-
-			$nextTimesheet = trim(fgets($timesheetFile));
-		}
-		fclose ($timesheetFile);
-		print ("<h1>END OF REPORT</h1>");
-	?>
+    while (!feof($timesheetFile)) {
+        list($firstName, $lastName, $hoursWorked, $hourlyRate) =
+            explode(":", $nextTimesheet);
+        if ($hoursWorked > 0) {
+            print("$lastName worked $hoursWorked  hours <br>");
+        }
+        $nextTimesheet = trim(fgets($timesheetFile));
+    }
+    fclose($timesheetFile);
+    print("<h1>END OF REPORT</h1>");
+    ?>
 </body>
+
 </html>

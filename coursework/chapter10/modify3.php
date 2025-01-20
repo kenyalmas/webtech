@@ -29,8 +29,9 @@
     while (!feof($timesheetFile)) {
         list($firstName, $lastName, $hoursWorked, $hourlyRate) =
             explode(":", $nextTimesheet);
-
-        print("$firstName $lastName<br>");
+        if ($hoursWorked >= 40 and $hourlyRate < 15.00) {
+            print("$firstName $lastName<br>");
+        }
 
         $nextTimesheet = trim(fgets($timesheetFile));
     }

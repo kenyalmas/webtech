@@ -13,29 +13,29 @@
 -->
 
 <html>
+
 <head>
-	<title>FixIt4</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>FixIt4</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<?php
-		$total = 0;
-		$count = 0;
-		$agesFile = fopen("ages.txt", "r");
-		$nextAge = trim(fgets($agesFile));
+    <?php
+    $total = 0;
+    $count = 0;
+    $agesFile = fopen("ages.txt", "r");
+    $nextAge = trim(fgets($agesFile));
 
-		while (!feof($agesFile) )
-		{
-			$total = $total + $nextAge;
-			$count = $count + 1;
-
-			$averageAge = $total / $count;
-			print ("<p>AVERAGE AGE: $averageAge</p>");
-
-			$nextAge = trim(fgets($agesFile));
-		}
-		fclose ($agesFile);
-	?>
+    while (!feof($agesFile)) {
+        $total = $total + $nextAge;
+        $count = $count + 1;
+        $nextAge = trim(fgets($agesFile));
+    }
+    fclose($agesFile);
+    $averageAge = $total / $count;
+    print("<p>AVERAGE AGE: $averageAge</p>");
+    ?>
 </body>
+
 </html>

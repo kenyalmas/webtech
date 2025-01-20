@@ -12,28 +12,34 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify1</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify1</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<?php
-		$retired = 0;
-		$notRetired = 0;
+    <?php
+    $retired = 0;
+    $notRetired = 0;
 
-		$agesFile = fopen("ages.txt", "r");
-		$nextAge = trim(fgets($agesFile));
-		while (!feof($agesFile) )
-		{
+    $agesFile = fopen("ages.txt", "r");
+    $nextAge = trim(fgets($agesFile));
+    while (!feof($agesFile)) {
+        if ($nextAge > 65) {
+            $retired += 1;
+        } else {
+            $notRetired += 1;
+        }
 
+        $nextAge = trim(fgets($agesFile));
+    }
+    fclose($agesFile);
 
-			$nextAge = trim(fgets($agesFile));
-		}
-		fclose ($agesFile);
-
-		print("<p>Number of retired people: $retired</p>");
-		print("<p>Number of people not retired: $notRetired</p>");
-	?>
+    print("<p>Number of retired people: $retired</p>");
+    print("<p>Number of people not retired: $notRetired</p>");
+    ?>
 </body>
+
 </html>

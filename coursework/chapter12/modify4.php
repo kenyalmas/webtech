@@ -12,15 +12,19 @@
 	You do not to change modify4.html which just runs the program.
 -->
 <html>
-<head>
-	<title>Modify 4</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
-</head>
-<body>
-	<h1>Modify 4</h1>
 
-	<?php
-		print("<p>France has a population of 65.8 million people. The capital city is Paris and the language is French. The currency is the Franc.</p>");
-	?>
+<head>
+    <title>Modify 4</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
+</head>
+
+<body>
+    <h1>Modify 4</h1>
+
+    <?php
+    $franceInfo = array("population" => 65.8, "capital" => "Paris", "language" => "French", "currency" => "Franc");
+    print("<p>France has a population of " . $franceInfo['population'] . " million people. The capital city is " . $franceInfo['capital'] . " and the language is " . $franceInfo['language'] . ". The currency is the " . $franceInfo['currency'] . ".</p>");
+    ?>
 </body>
+
 </html>
