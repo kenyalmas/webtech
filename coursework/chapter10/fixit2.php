@@ -10,22 +10,25 @@
 -->
 
 <html>
+
 <head>
-	<title>FixIt2</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>FixIt2</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<?php
-		$salesFile = fopen("sales.txt", "r");
-		$nextSale = trim(fgets($salesFile));
+    <?php
+    $salesFile = fopen("sales.txt", "r");
 
-		while (!feof($salesFile) )
-		{
-			$nextSale = trim(fgets($salesFile));
-			print ("The next sale is $nextSale<br>");
-		}
-		fclose ($salesFile);
-	?>
+    while (!feof($salesFile)) {
+        $nextSale = trim(fgets($salesFile));
+        if ($nextSale != "") {
+            print("The next sale is $nextSale<br>");
+        }
+    }
+    fclose($salesFile);
+    ?>
 </body>
+
 </html>

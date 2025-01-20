@@ -12,28 +12,30 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify3</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify3</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<?php
-		print ("<h1>EMPLOYEES WHO DESERVE A RAISE: </h1>");
+    <?php
+    print("<h1>EMPLOYEES WHO DESERVE A RAISE: </h1>");
 
-		$timesheetFile = fopen("timesheets.txt", "r");
-		$nextTimesheet = trim(fgets ($timesheetFile));
+    $timesheetFile = fopen("timesheets.txt", "r");
+    $nextTimesheet = trim(fgets($timesheetFile));
 
-		while (!feof($timesheetFile) )
-		{
-			list ($firstName, $lastName, $hoursWorked, $hourlyRate) =
-				explode (":", $nextTimesheet);
+    while (!feof($timesheetFile)) {
+        list($firstName, $lastName, $hoursWorked, $hourlyRate) =
+            explode(":", $nextTimesheet);
 
-			print ("$firstName $lastName<br>");
+        print("$firstName $lastName<br>");
 
-			$nextTimesheet = trim(fgets($timesheetFile));
-		}
-		fclose ($timesheetFile);
-	?>
+        $nextTimesheet = trim(fgets($timesheetFile));
+    }
+    fclose($timesheetFile);
+    ?>
 </body>
+
 </html>

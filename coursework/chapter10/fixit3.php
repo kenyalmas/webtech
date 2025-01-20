@@ -10,25 +10,28 @@
 -->
 
 <html>
+
 <head>
-	<title>FixIt3</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>FixIt3</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<?php
-		$totalSales = 0;
-		$salesFile = fopen("sales.txt", "r");
-		$nextSale = trim(fgets($salesFile));
-		while (!feof($salesFile) )
-		{
-			$totalSales = $nextSale + $nextSale;
-			$nextSale = trim(fgets($salesFile));
-		}
-		fclose ($salesFile);
+    <?php
+    $totalSales = 0;
+    $salesFile = fopen("sales.txt", "r");
+    while (!feof($salesFile)) {
+        $nextSale = trim(fgets($salesFile));
+        if ($nextSale != "") {
+            $totalSales = $totalSales + $nextSale;
+        }
+    }
+    fclose($salesFile);
 
-		print("<p>TOTAL SALES: $$totalSales</p>");
+    print("<p>TOTAL SALES: $$totalSales</p>");
 
-	?>
+    ?>
 </body>
+
 </html>

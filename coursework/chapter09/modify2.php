@@ -13,8 +13,8 @@
 		HINT: run the program first, look at the code, and understand
 		how it works before you make any changes.
 		The loop currently counts from 1 to 20.
-		Each time through the loop a celsius temperature is converted
-		to fahrenheit and the celsius temperature and fahrenheit
+		Each time through the loop a us temperature is converted
+		to cannadian and the us temperature and cannadian
 		temperature are then displayed as  table row.
 		So how would you change this to convert a US Dollar amount into
 		Canadian each time through the loop, starting with 100, ending
@@ -23,28 +23,30 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify2</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify2</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify2</h1>
+    <h1>Modify2</h1>
 
-	<?php
-		print ("<table>");
-		print ("<tr><td><strong>Degrees Celsius</strong></td>
-				<td><strong>Degrees Fahrenheit</strong></td></tr>");
+    <?php
+    print("<table>");
+    print("<tr><td><strong>Currency US</strong></td>
+				<td><strong>Currency Canadian</strong></td></tr>");
 
-		for ($celsius = 1; $celsius <= 20;$celsius = $celsius + 1 )
-		{
-			$fahrenheit = (9 / 5) * $celsius + 32;
-			print("<tr><td class = \"center\">$celsius</td>
-				<td class = \"center\">$fahrenheit</td></tr>");
-		}
+    for ($us = 100; $us <= 500; $us = $us + 50) {
+        $cannadian = $us * 1.25;
+        print("<tr><td class = \"center\">$us</td>
+				<td class = \"center\">$cannadian</td></tr>");
+    }
 
-		print ("</table>");
-	?>
+    print("</table>");
+    ?>
 
 </body>
+
 </html>

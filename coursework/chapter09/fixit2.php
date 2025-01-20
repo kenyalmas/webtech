@@ -11,21 +11,24 @@
 -->
 
 <html>
+
 <head>
-	<title>Wage Report</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Wage Report</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>WAGE REPORT</h1>
+    <h1>WAGE REPORT</h1>
 
-	<?php
-		$hourlyWage = 10.75;
-		for ($hoursWorked = 20; $hoursWorked >= 40; $hoursWorked = $hoursWorked + 1)
-		{
-			$wage = $hoursWorked * $hourlyWage;
-			print ("If you work $hoursWorked hours, you will earn $$wage<br>");
-		}
+    <?php
+    $hourlyWage = 10.75;
+    for ($i = 0; $i <= 20; $i++) {
+        $hoursWorked = 20 + $i;
+        $wage = $hoursWorked * $hourlyWage;
+        print("If you work $hoursWorked hours, you will earn $$wage<br>");
+    }
 
-	?>
+    ?>
 </body>
+
 </html>

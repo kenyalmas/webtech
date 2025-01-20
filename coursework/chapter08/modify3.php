@@ -19,20 +19,40 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify3</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify3</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify3</h1>
+    <h1>Modify3</h1>
 
-	<?php
-		$capital = $_POST['capital'];
+    <?php
+    $capital = $_POST['capital'];
+    if ($capital == "London") {
+        print("<p>You entered London, which is the capital city of England.</p>");
+    }
 
+    if ($capital == "Madrid") {
+        print("<p>You entered Madrid, which is the capital city of Spain.</p>");
+    }
 
-		print("<p>The capital of Egypt is Cairo</p>");
-	?>
+    if ($capital == "Istanbul") {
+        print("<p>You entered Istanbul, which is the capital city of Turkey.</p>");
+    }
+
+    if ($capital == "Rome") {
+        print("<p>You entered Rome, which is the capital city of Italy.</p>");
+    }
+
+    if ($capital == "Cairo") {
+        print("<p>That is correct!</p>");
+    }
+    //    print("<p>The capital of Egypt is Cairo</p>");
+    ?>
 
 </body>
+
 </html>

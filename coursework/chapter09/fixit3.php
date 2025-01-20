@@ -13,20 +13,23 @@
 -->
 
 <html>
+
 <head>
-	<title>MILEAGE REIMBURSEMENT TABLE</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>MILEAGE REIMBURSEMENT TABLE</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>MILEAGE REIMBURSEMENT TABLE</h1>
+    <h1>MILEAGE REIMBURSEMENT TABLE</h1>
 
-	<?php
+    <?php
 
-		for ($miles = 50; $miles <= 500; $miles = $miles + 25)
+    for ($miles = 50; $miles <= 500; $miles = $miles + 25) {
 
-			$reimbursement = $miles * 0.35;
-			print ("Your reimbursement for $miles miles will be $$reimbursement<br />");
-
-	?>
+        $reimbursement = $miles * 0.35;
+        print("Your reimbursement for $miles miles will be $$reimbursement<br />");
+    }
+    ?>
 </body>
+
 </html>

@@ -2,8 +2,8 @@
 <!--Author:
 	Date:
 	File:	  fixit4.php
-	Purpose:  This program uses a variable in a loop to display the same message in 
-			  five different heading levels (<h1> then <h2> then <h3> then <h4> then 
+	Purpose:  This program uses a variable in a loop to display the same message in
+			  five different heading levels (<h1> then <h2> then <h3> then <h4> then
 			  <h5>). Then it uses a SECOND loop to display the headings in
 			  reverse order!
 			  Can you fix it so that only heading levels 1, 3 and 5
@@ -14,24 +14,25 @@
 -->
 
 <html>
+
 <head>
-	<title>King Painting</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css" >
+    <title>King Painting</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<?php
+    <?php
 
-		for ($size = 1; $size <= 5; $size = $size + 1)
-		{
-			print ("<h$size>King Painting</h$size>");
-		}
+    for ($size = 1; $size <= 5; $size = $size + 2) {
+        print("<h$size>King Painting</h$size>");
+    }
 
 
-		for ($size = 5; $size >= 1; $size = $size - 1)
-		{
-			print ("<h$size>King Painting</h$size>");
-		}
+    for ($size = 5; $size >= 1; $size = $size - 2) {
+        print("<h$size>King Painting</h$size>");
+    }
 
-	?>
+    ?>
 </body>
+
 </html>

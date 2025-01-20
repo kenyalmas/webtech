@@ -9,24 +9,26 @@
 -->
 
 <html>
+
 <head>
-	<title>Sales</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Sales</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>Sales</h1>
+    <h1>Sales</h1>
 
-	<?php
-		$total = 0;
-		$salesFile = fopen("sales.txt", "r");
+    <?php
+    $total = 0;
+    $salesFile = fopen("sales.txt", "r");
 
-		for ($count = 1; $count <= 10; $count = $count + 1)
-		{
-			$nextSalesAmount = trim(fgets($salesFile));
-			$total = $total + $total;
-		}
-		fclose($salesFile);
-		print ("TOTAL SALES: $$total");
-	?>
+    for ($count = 1; $count <= 10; $count = $count + 1) {
+        $nextSalesAmount = trim(fgets($salesFile));
+        $total = $total + $nextSalesAmount;
+    }
+    fclose($salesFile);
+    print("TOTAL SALES: $$total");
+    ?>
 </body>
+
 </html>

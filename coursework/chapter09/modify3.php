@@ -22,26 +22,30 @@
 -->
 
 <html>
+
 <head>
-	<title>Modify3</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify3</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify3</h1>
+    <h1>Modify3</h1>
 
-	<?php
+    <?php
 
-		$wageFile = fopen("wages.txt", "r");
-		$wage1 = trim(fgets($wageFile));
-		$wage2 = trim(fgets($wageFile));
-		$wage3 = trim(fgets($wageFile));
-		fclose($wageFile);
+    $wageFile = fopen("wages.txt", "r");
+    $total = 0;
+    for ($i = 0; $i < 20; $i++) {
+        $wage = trim(fgets($wageFile));
+        $total = $total + $wage;
+    }
+    fclose($wageFile);
 
-		$total = $wage1 + $wage2 + $wage3;
-		print("<p>The total wages are  $$total</p>");
-	?>
+    print("<p>The total wages are  $$total</p>");
+    ?>
 
 
 </body>
+
 </html>

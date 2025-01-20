@@ -23,7 +23,7 @@
 
     print("<p>Your hourly wage is $ $hourlyWage and you worked
 		$hoursWorked hours.</p>");
-    print("<p>Your wages are $ $wage.</p>");
+    print("<p>Your wages are $wage.</p>");
 
     if ($hoursWorked > 40 or $hourlyWage < 8.00)
         print("<p>You also get a $100 bonus.</p>");
