@@ -1,4 +1,4 @@
-<!--	
+<!--
 	Author:
 	Date:
 	File:	paint-estimate.txt
@@ -7,10 +7,36 @@
 
 paint-estimate.html algorithm:
 
+    Prompt for length
+    Get  length
+    Prompt for width
+    Get width
+    Prompt for height
+    Get height
+    submit to paint-estimate.php
+
 END
 
 
 
 paint-estimate.php algorithm:
+
+   Receive length, width, & height from paint-estimate.html
+   longWalls = length * height
+   wideWalls = width * height
+   ceiling = length * width
+   totalArea = (longWalls * 2) + (wideWalls * 2) + ceiling
+
+   paintCost = 17
+   paintCoverage = 400
+   paintAmount = totalArea / paintCoverage
+   costForPaint = paintAmount * paintCost
+
+   coveragePerHour = 200
+   painterHourly = 25.00
+   timeToPaint = totalArea / coveragePerHour
+   costToPaint = timeToPaint * painterHourly
+
+   TotalCost = costToPaint + costForPaint
 
 END

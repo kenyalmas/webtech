@@ -14,31 +14,35 @@
 	that is provided in the inc-wage-functions.php file instead of
 	performing this calculation directly.
 	Be sure to add the required include statement!
-	
+
 
 -->
 <html>
+
 <head>
-	<title>Modify2</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify2</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify2</h1>
+    <h1>Modify2</h1>
 
-	<?php
-		$payIncrease = 0.10;
-		print ("<table>");
-		print ("<tr><td><strong>Current Pay Rate</strong></td>
+    <?php
+    include 'inc-wage-functions.php';
+
+    $payIncrease = 0.10;
+    print("<table>");
+    print("<tr><td><strong>Current Pay Rate</strong></td>
 					<td><strong>New Pay Rate</strong></td></tr>");
 
-		for ($hourlyWage = 8.00; $hourlyWage < 25.00; $hourlyWage = $hourlyWage + 1)
-		{
-			$newHourlyWage = $hourlyWage + $hourlyWage * $payIncrease;
-			print("<tr><td>$$hourlyWage</td><td>$$newHourlyWage</td></tr>");
-		}
-		print ("</table");
-	?>
+    for ($hourlyWage = 8.00; $hourlyWage < 25.00; $hourlyWage = $hourlyWage + 1) {
+        $newHourlyWage = getNewHourlyWage($hourlyWage, $payIncrease);
+        print("<tr><td>$$hourlyWage</td><td>$$newHourlyWage</td></tr>");
+    }
+    print("</table");
+    ?>
 
 </body>
+
 </html>

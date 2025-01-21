@@ -1,4 +1,4 @@
-<!--	
+<!--
 	Author:
 	Date:
 	File:	software-order.txt
@@ -6,9 +6,16 @@
 -->
 
 software-order.html algorithm:
+    Prompt for numberCopies
+    Get numberCopies
+    Prompt for operatingSystem
+    Get operatingSystem
 
 END
 
 software-order.php algorithm:
+
+    Receive numberCopies & operatingSystem
+
 
 END

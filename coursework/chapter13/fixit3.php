@@ -11,25 +11,28 @@
 -->
 
 <html>
+
 <head>
-	<title>Wage Report</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Wage Report</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
-	<h1>WAGE REPORT</h1>
+    <h1>WAGE REPORT</h1>
 
-	<?php
-		include("inc-wage-functions.php");
+    <?php
+    include("inc-wage-functions.php");
 
-		$hourlyWage = 12.75;
-		$hoursWorked = 45;
-		$wage = getWage($hourlyWage, $hoursWorked);
-		$bonus = getBonus($hourlyWage);
+    $hourlyWage = 12.75;
+    $hoursWorked = 45;
+    $wage = getWage($hourlyWage, $hoursWorked);
+    $bonus = getBonus($wage);
 
-		print("<p>Your hourly wage is $$hourlyWage and you worked
+    print("<p>Your hourly wage is $$hourlyWage and you worked
 		$hoursWorked hours.</p>");
-		print("<p>Your wages are $$wage.</p>");
-		print("<p>Your bonus is $$bonus.</p>");
-	?>
+    print("<p>Your wages are $$wage.</p>");
+    print("<p>Your bonus is $$bonus.</p>");
+    ?>
 </body>
+
 </html>

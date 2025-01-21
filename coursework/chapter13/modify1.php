@@ -17,38 +17,35 @@
 
 -->
 <html>
+
 <head>
-	<title>Modify1</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Modify1</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
+
 <body>
 
-	<h1>Modify1</h1>
+    <h1>Modify1</h1>
 
-	<?php
+    <?php
+    include "inc-wage-functions.php";
 
-		$hoursWorked = $_POST['hoursWorked'];
-		$hourlyWage = $_POST['hourlyWage'];
+    $hoursWorked = $_POST['hoursWorked'];
+    $hourlyWage = $_POST['hourlyWage'];
 
-		if ($hourlyWage < 8.00)
-			$hourlyWage = 8.00;
+    $hourlyWage = setMinimumWage($hourlyWage);
 
-		if ($hoursWorked <= 40)
-			$wage = $hourlyWage * $hoursWorked;
-		else
-			$wage = ($hourlyWage * 40) + ($hourlyWage * 1.5 * ($hoursWorked - 40));
+    $wage = getWage($hourlyWage, $hoursWorked);
 
-		if ($wage > 200)
-			$bonus = 75.00;
-		else
-			$bonus = 50.00;
+    $bonus = getBonus($wage);
 
 
-		print("<p>Your hourly wage is $$hourlyWage and you worked
+    print("<p>Your hourly wage is $$hourlyWage and you worked
 		$hoursWorked hours.</p>");
-		print("<p>Your wages are $$wage.</p>");
-		print("<p>Your bonus is $$bonus.</p>");
-	?>
+    print("<p>Your wages are $$wage.</p>");
+    print("<p>Your bonus is $$bonus.</p>");
+    ?>
 
 </body>
+
 </html>
