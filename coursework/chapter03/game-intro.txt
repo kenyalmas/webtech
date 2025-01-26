@@ -1,14 +1,33 @@
-<!--	
-	Author:
-	Date:
+<!--
+	Author: Kenneth Almas
+	Date:   01/26/2025
 	File:	game-intro.txt
 	Purpose:Chapter 3 Exercise
 -->
 
 game-intro.html algorithm:
 
+    Prompt user for characterName
+    Get characterName from user
+    Prompt user for characterType
+    Get characterType from user
+    Prompt user for expTokens
+    Get expTokens from user
+    Prompt user for hpTokens
+    Get hpTokens from user
+    Prompt user for supplyTokens
+    Get supplyTokens from user
+
+
 END
 
 game-intro.php algorithm:
+
+    Receive characterName, characterType, expTokens, hpTokens, supplyTokens
+    hpGold = hpTokens / 10
+    expGold = expTokens / 2
+    supplyGold = supplyTokens / 25
+    totalGold = expGold + supplyGold + hpGold
+    Display characterName, characterType, expTokens, hpTokens, supplyTokens, expGold, hpGold, supplyGold, totalGold
 
 END

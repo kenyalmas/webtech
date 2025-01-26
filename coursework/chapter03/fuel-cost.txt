@@ -1,15 +1,25 @@
-<!--	
-	Author:
-	Date:
+<!--
+	Author: Kenneth Almas
+	Date:   01/26/2025
 	File:	fuel-cost.txt
 	Purpose:Chapter 3 Exercise
 -->
 
 fuel-cost.html algorithm:
 
-	
+    Prompt user for userMPG
+    Get userMPG from user
+    Prompt user for milesTraveled
+    Get milesTraveled from user
+    Prompt user for costPerGal
+    Get costPerGal from user
+
 END
 
 fuel-cost.php algorithm:
+
+    Receive userMPG, milesTraveled, costPerGal
+    tripCost = (milesTraveled / userMPG) * costPerGal
+    Display tripCost
 
 END

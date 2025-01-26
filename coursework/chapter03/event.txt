@@ -1,14 +1,25 @@
-<!--	
-	Author:
-	Date:
+<!--
+	Author: Kenneth Almas
+	Date:   01/26/2025
 	File:	event.txt
-	Purpose:Chapter 3 Exercise 
+	Purpose:Chapter 3 Exercise
 -->
-	
+
 event.html algorithm:
-	
+
+    Prompt user for name
+    Get name from user
+    Prompt user for phoneNumber
+    Get phoneNumber from user
+    Prompt user for numTickets
+    Get numTickets from user
+
 END
 
 event.php algorithm:
+
+    Receive name, phoneNumber, numTickets
+    ticketCost = numTickets * 35.00
+    Display name, phoneNumber, numTickets, ticketCost
 
 END

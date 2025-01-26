@@ -1,14 +1,25 @@
-<!--	
-	Author:
-	Date:
+<!--
+	Author: Kenneth Almas
+	Date:   01/26/2025
 	File:	travel.txt
 	Purpose:Chapter 3 Exercise
 -->
 
 travel.html algorithm:
 
+    Prompt user for numTickets
+    Get numTickets
+    Prompt user for numNights
+    Get numNights
+
 END
 
 travel.php algorithm:
+
+    Receive numTickets numNights
+    airlineCost = 875.00 * numTickets
+    hotelCost = 110.00
+    totalCost = airlineCost + hotelCost
+    Display numTickets, numNights, airlineCost, hotelCost, totalCost
 
 END

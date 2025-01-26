@@ -1,6 +1,6 @@
 <!--
-	Author:
-	Date:
+	Author: Kenneth Almas
+	Date:   01/26/2025
 	File:	paint-estimate.txt
 	Purpose:Chapter 3 Exercise
 -->
