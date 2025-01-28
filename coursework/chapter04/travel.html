@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<!--	Author:
-		Date:
+<!--	Author: Kenneth Almas
+		Date:   01/27/2025
 		File:	travel.html
 		Purpose: Chapter 4 Exercise
 -->
 
 <html>
+
 <head>
-	<title>Travel to Rome</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>Travel to Rome</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
 
 <body>
+    <h1>Travel to Rome Reservation Form</h1>
+    <form action="travel.php">
+        <label for="numTravelers">How many people?</label>
+        <input type="text" name="numTravelers" size="5">
+        <label for="numNights">How many nights?</label>
+        <input type="text" name="numNights" size="5">
+        <br>
+        <input class="submit" type="submit" value="Submit Your Reservation">
+
+    </form>
 
 </body>
+
 </html>

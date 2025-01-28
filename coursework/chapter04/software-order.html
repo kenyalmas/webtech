@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<!--	Author:
-		Date:
+<!--	Author: Kenneth Almas
+		Date:   01/26/2025
 		File:	software-order.html
 		Purpose: Chapter 4 Exercise
 -->
 
 <html>
+
 <head>
-	<title>SaveTheWorld Software</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>SaveTheWorld Software</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
 
 <body>
-
+    <h1>SaveTheWorld: Order Form</h1>
+    <p>
+        To order <strong>SaveTheWorld</strong>, please complete the following order form:
+    </p>
+    <form action="software-order.php">
+        <label>Operating system: </label>
+        <select name="os">
+            <option value="Linux">Linux</option>
+            <option value="Windows">Windows</option>
+            <option value="macOS">macOS</option>
+        </select>
+        <label>Number of copies: </label>
+        <input type="text" size="5" name="numCopies" value="0"><br>
+        <input class="submit" type="submit" value="Submit Your Order">
+    </form>
 </body>
+
 </html>

@@ -6,22 +6,59 @@
 -->
 
 <html>
+
 <head>
-	<title>gameIntro</title>
-	<link rel ="stylesheet" type="text/css" href="sample.css">
+    <title>gameIntro</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
 
 <body>
-	<h1>Character Creation</h1>
-	<p><strong>YOU HAVE 10 GOLD PIECES</strong></p>
-	<p>	1 gold piece buys 10 health tokens<br>
-		1 gold piece buys 2 experience tokens<br>
-		1 gold piece buys 25 supply tokens<br>
-	</p>
+    <h1>Character Creation</h1>
+    <p><strong>YOU HAVE 10 GOLD PIECES</strong></p>
+    <p> 1 gold piece buys 10 health tokens<br>
+        1 gold piece buys 2 experience tokens<br>
+        1 gold piece buys 25 supply tokens<br>
+    </p>
+    <form action="game-intro.php">
+        <label for="charName">Name of character:</label>
+        <input type="text" name="charName" size="16">
+        <label for="charType">Select your character type:</label>
+        <select name="charType">
+            <option value="dwarf">dwarf</option>
+            <option value="elf">elf</option>
+            <option value="human">human</option>
+            <option value="wizard">wizard</option>
+        </select>
+        <label for="healthTokens">Purchase health tokens</label>
+        <select name="healthTokens">
+            <option value="0">0</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+        </select>
+        <label for="expTokens">Purchase experience tokens</label>
+        <select name="expTokens">
+            <option value="0">0</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+        </select>
+        <label for="supplyTokens">Purchase supply tokens</label>
+        <select name="supplyTokens">
+            <option value="0">0</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="75">75</option>
+            <option value="100">100</option>
+        </select>
+        <input class="submit" type="submit" value="ADD YOUR CHARACTER">
+    </form>
 
-	
-	
-	
-	
+
+
+
 </body>
+
 </html>
