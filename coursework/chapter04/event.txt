@@ -7,8 +7,8 @@
 
 event.html algorithm:
 
-    Prompt user for name
-    Get name from user
+    Prompt user for firstName 
+    Get firstName from user
     Prompt user for phoneNumber
     Get phoneNumber from user
     Prompt user for numTickets
@@ -18,7 +18,7 @@ END
 
 event.php algorithm:
 
-    Receive name, phoneNumber, numTickets
+    Receive firstName, phoneNumber, numTickets
     ticketCost = numTickets * 35.00
     Display name, phoneNumber, numTickets, ticketCost
 

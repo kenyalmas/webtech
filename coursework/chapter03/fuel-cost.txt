@@ -1,4 +1,12 @@
-<!--
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   chapter03/paint-estimate.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
 	Author: Kenneth Almas
 	Date:   01/26/2025
 	File:	fuel-cost.txt
@@ -7,8 +15,8 @@
 
 fuel-cost.html algorithm:
 
-    Prompt user for userMPG
-    Get userMPG from user
+    Prompt user for mpg 
+    Get mpg from user
     Prompt user for milesTraveled
     Get milesTraveled from user
     Prompt user for costPerGal
@@ -18,7 +26,7 @@ END
 
 fuel-cost.php algorithm:
 
-    Receive userMPG, milesTraveled, costPerGal
+    Receive mpg, milesTraveled, costPerGal
     tripCost = (milesTraveled / userMPG) * costPerGal
     Display tripCost
 
