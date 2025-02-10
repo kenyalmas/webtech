@@ -9,23 +9,23 @@
 <html>
 
 <head>
-  <title>Fuel Costs</title>
-  <link rel="stylesheet" type="text/css" href="sample.css">
+    <title>Fuel Costs</title>
+    <link rel="stylesheet" type="text/css" href="sample.css">
 </head>
 
 <body>
-  <h1>Fuel Cost Calculator</h1>
-  <p>
-    This program will help you calculate fuel costs for a trip.</p>
-  <form>
-    <label for="mpg">What is your car's average fuel consumption (mpg)?</label>
-    <input type="number" name="mpg" size="5">
-    <label for="milesTraveled">How long is this trip in miles?</label>
-    <input type="number" name="milesTraveled" size="5">
-    <label for="costPerGal">What do you pay on average for a gallon of fuel?</label>
-    <input type="number" name="costPerGal" size="5">
-    <input class="submit" type="submit" value="Tell me the Cost">
-  </form>
+    <h1>Fuel Cost Calculator</h1>
+    <p>
+        This program will help you calculate fuel costs for a trip.</p>
+    <form action="fuel-cost.php" method="post">
+        <label for="mpg">What is your car's average fuel consumption (mpg)?</label>
+        <input type="number" name="mpg" size="5">
+        <label for="milesTraveled">How long is this trip in miles?</label>
+        <input type="number" name="milesTraveled" size="5">
+        <label for="costPerGal">What do you pay on average for a gallon of fuel?</label>
+        <input type="number" name="costPerGal" size="5">
+        <input class="submit" type="submit" value="Tell me the Cost">
+    </form>
 
 
 </body>
