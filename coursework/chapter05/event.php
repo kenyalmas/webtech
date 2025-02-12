@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author:
-		Date:
+<!--	Author: Kenneth Almas
+		Date:   02/11/2025
 		File:	event.php
 		Purpose: Chapter 5 Exercise
 
