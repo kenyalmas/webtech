@@ -24,13 +24,12 @@
 	$hotelCost = 110.00 * ($numTickets * $numNights);
 	$totalCost = $airlineCost + $hotelCost;
 
-	print('<h1>Thank you for your order!</h1> 
-            <p> You are coming with ' . $numTickets .'
-        friends and staying for '. $numNights . ' nights. </p>');
-	print('<p> The cost of your flight will be $' . $airlineCost .'
-        The hotel stay will cost $' . $hotelCost .'
-        Bringing the total cost to $' . $totalCost . '</p>');
-
+	print('<h2>Thank you for your order!</h2> 
+        <p> You are coming with ' . $numTickets .
+	    ' friends and staying for '. $numNights . ' nights.' .
+	    '<br>The cost of your flight will be $' . $airlineCost .
+	    '<br>The hotel stay will cost $' . $hotelCost .
+	    '<br>Bringing the total cost to $' . $totalCost . '</p>');
 	?>
 
 </body>
