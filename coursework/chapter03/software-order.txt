@@ -6,8 +6,8 @@
 -->
 
 software-order.html algorithm:
-    Prompt for numberCopies
-    Get numberCopies
+    Prompt for numCopies
+    Get numCopies
     Prompt for operatingSystem
     Get operatingSystem
 
@@ -15,11 +15,11 @@ END
 
 software-order.php algorithm:
 
-    Receive numberCopies & operatingSystem
-    subtotal = numberCopies * 35.00
+    Receive numCopies & operatingSystem
+    subtotal = numCopies * 35.00
     tax = subtotal * 0.07
-    shipHandle = numberCopies * 1.25
+    shipHandle = numCopies * 1.25
     total = subtotal + tax + shipHandle
-    Display operatingSystem, numberCopies, subtotal, tax, shipHandle, total
+    Display operatingSystem, numCopies, subtotal, tax, shipHandle, total
 
 END
