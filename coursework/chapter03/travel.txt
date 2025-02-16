@@ -18,7 +18,7 @@ travel.php algorithm:
 
     Receive numTickets numNights
     airlineCost = 875.00 * numTickets
-    hotelCost = 110.00
+    hotelCost = 110.00 * (numTickets * numNights)
     totalCost = airlineCost + hotelCost
     Display numTickets, numNights, airlineCost, hotelCost, totalCost
 
