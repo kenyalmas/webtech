@@ -7,14 +7,14 @@
 
 game-intro.html algorithm:
 
-    Prompt user for characterName
-    Get characterName from user
+    Prompt user for charName
+    Get charName from user
     Prompt user for characterType
     Get characterType from user
     Prompt user for expTokens
     Get expTokens from user
-    Prompt user for hpTokens
-    Get hpTokens from user
+    Prompt user for healthTokens
+    Get healthTokens from user
     Prompt user for supplyTokens
     Get supplyTokens from user
 
@@ -23,11 +23,11 @@ END
 
 game-intro.php algorithm:
 
-    Receive characterName, characterType, expTokens, hpTokens, supplyTokens
-    hpGold = hpTokens / 10
+    Receive charName, characterType, expTokens, healthTokens, supplyTokens
+    healthGold = healthTokens / 10
     expGold = expTokens / 2
     supplyGold = supplyTokens / 25
-    totalGold = expGold + supplyGold + hpGold
-    Display characterName, characterType, expTokens, hpTokens, supplyTokens, expGold, hpGold, supplyGold, totalGold
+    totalGold = expGold + supplyGold + healthGold
+    Display charName, characterType, expTokens, healthTokens, supplyTokens, expGold, healthGold, supplyGold, totalGold
 
 END
