@@ -16,7 +16,7 @@
     <h1>SaveTheWorld: Submission Results</h1>
 
     <?php
-        $os = $_POST['os'];
+    $os = $_POST['os'];
     $numCopies = $_POST['numCopies'];
 
     $submitOrder = fopen("order.txt", "w");

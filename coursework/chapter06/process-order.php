@@ -17,8 +17,9 @@
 
     <?php
         $incomingOrder = fopen("order.txt", "r");
-    list($os, $numCopies) = trim(fgets($incomingOrder));
-    fclose($numCopies);
+    $order = trim(fgets($incomingOrder));
+    list($os, $numCopies) = explode(":", $order);
+    fclose($incomingOrder);
 
 
     $subtotal = $numCopies * 35.00;
