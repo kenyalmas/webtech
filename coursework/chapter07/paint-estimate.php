@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--Author:
-	Date:
+<!--Author: Kenneth Almas
+	Date:	02/27/2025
 	File:	paint-estimate.php
 	Purpose:Chapter 7 Exercise
 	
@@ -37,7 +37,11 @@
 		print("Labor Cost: $".number_format($laborCost, 2)."<br>");
 		print("Total Cost: $".number_format($totalCost, 2)."</p>");
 
-
+		if ($firstTime == "yes") {
+			$discountedCost = $totalCost - ($totalCost * .1);
+			print("<p>We want your service! Since you are a first time customer, we are offering a 10% deduction</p>" .
+				"<p>Your actual cost is $" . number_format($discountedCost, 2) . "</p>");
+		}
 			
 	?>
 
