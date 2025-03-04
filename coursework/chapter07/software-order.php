@@ -22,6 +22,12 @@
 
 		$subTotal = $numCopies * 35.00;
 		$salesTax = $subTotal * 0.07;
+		
+		if ($numCopies < 5) {
+			$shippingAndHandling = 3.50;
+		} else {
+			$shippingAndHandling = $numCopies * 0.75;
+		}
 
 
 		$totalCost = $subTotal + $salesTax + $shippingAndHandling;

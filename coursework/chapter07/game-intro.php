@@ -20,6 +20,7 @@
 			$healthTokens = $_POST['healthTokens'];
 			$expTokens = $_POST['expTokens'];
 			$supplyTokens = $_POST['supplyTokens'];
+			if (strtolower($secretPassword) == "php123") {
 
 				$goldSpent = $healthTokens / 10 + $expTokens / 2 + $supplyTokens / 25;
 			
@@ -28,7 +29,9 @@
 							$expTokens experience tokens, and 
 							$supplyTokens supply tokens.</p>");
 				print("<p>$charName has spent $goldSpent gold pieces.</p>");
-
+			} else {
+				print("<p>Sorry! That password is <strong>NOT</strong> correct! Please try again.</p>");
+			}
 
 	?>
 

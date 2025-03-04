@@ -21,7 +21,19 @@
 		$numTravelers = $_POST['numTravelers'];
 		$numNights = $_POST['numNights'];
 
+		if ($destination == "Rome") {
 
+			$tickets = 875.00 * $numTravelers;
+			$hotel = (110.00 * $numNights) * $numTravelers;
+			$totalCost = $tickets + $hotel;
+			}
+			if ($destination == "Tokyo") {
+	
+				$tickets = 1575.00 * $numTravelers;
+				$hotel = (240.00 * $numNights) * $numTravelers;
+				$totalCost = $tickets + $hotel;
+			}
+	
 
 		$tickets = 
 		$hotel = 
