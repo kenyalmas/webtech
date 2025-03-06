@@ -22,9 +22,9 @@
     $prePaid = fgets($prePaidFile);
     fclose($prePaidFile);
 
-    $numTickets = $numTickets + $prePaid;
+    $totalOrders = $numTickets + $prePaid;
 
-    if ($numTickets > 100)
+    if ($totalOrders > 100)
     {
         print('<h1>Sorry, we are sold out</h1>');
         print('<p> We are sold out of tickets for this event</p>');
@@ -37,16 +37,12 @@
     
 
     $fillPrepaid = fopen("ticket-count.txt", "w");
-    fputs($fillPrepaid, $numTickets);
+    fputs($fillPrepaid, $totalOrders);
     fclose($fillPrepaid);
-    }
-
+    
     $ticketCost = $numTickets * 35.00;
-    print('<h1>Thank you for your order ' . $firstName .  '</h1>');
-    print('<p>You bought a total of ' . $numTickets .
-        ' tickets for a total cost of $' . $ticketCost . '</p>');
-    print('<p> Electronic copies will be sent to ' . $phoneNumber . '</p>');
-    ?>
+}
+       ?>
 
 </body>
 </html>
