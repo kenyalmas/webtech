@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--Author:
-	Date:
-	File:	software-order.php
-	Purpose:Chapter 8 Exercise
+<!--	Author: Kenneth Almas
+		Date:	03/06/2025
+		File:	software-order.php
+		Purpose:Chapter 8 Exercise
 -->
 
 <html>
@@ -17,7 +17,17 @@
 	<?php
 		$os = $_POST['os'];
 		$numCopies = $_POST['numCopies'];
-		
+		if ($numCopies < 0) {
+			print("<p><strong>ERROR! You must order at least one copy!</strong></p>");
+		} else {
+
+			if ($numCopies < 5) {
+				$shippingAndHandling = 3.50;
+			} elseif ($numCopies < 10) {
+				$shippingAndHandling = 0.75 * $numCopies;
+			}else {
+				$shippingAndHandling = 0.85 * $numCopies;
+			}
 			$subTotal = $numCopies * 35.00;
 			$salesTax = $subTotal * 0.07;
 
@@ -29,9 +39,7 @@
 			print("<tr><td>Sales tax</td><td align=\"right\">$".number_format($salesTax, 2)."</td></tr>");
 			print("<tr><td>Shipping and handling</td><td align=\"right\">$".number_format($shippingAndHandling, 2)."</td></tr>");
 			print("<tr><td>TOTAL:</td><td align=\"right\">$".number_format($totalCost, 2)."</td></tr></table>");
-
-
-			print("<p><strong>ERROR! You must order at least one copy!</strong></p>");
+	}
 	?>
 
 </body>
