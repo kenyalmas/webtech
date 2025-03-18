@@ -22,11 +22,23 @@
 			$supplyTokens = $_POST['supplyTokens'];
 	
 			$goldSpent = $healthTokens / 10 + $expTokens / 2 + $supplyTokens / 25;
-			
+		if ($goldSpent > 10)
+			{	
 				print	("<h1>HEY THERE, $charName!</h1>");
 				print ("<p>YOU SPENT MORE GOLD THAN YOU HAVE!</p>");
 				print ("<p>GO BACK AND TRY THAT AGAIN - YOU HAVE 10 GOLD PIECES..</p>");
-						
+		}else
+			{			
+				if ($charType == "Wizard")
+				{
+					$expTokens = $expTokens + 2;
+				} elseif ($chartype == "Human" || $charType == "Dwarf")
+				{
+					$supplyTokens = $supplyTokens + 10;
+				}elseif ($charType == "Elf")
+				{
+					$healthTokens = $healthTokens + 5;
+				}
 
 				print("<h1>You have created $charName the $charType!</h1>");
 				print("<p>$charName has <strong>$healthTokens</strong> health tokens,

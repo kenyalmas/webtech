@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author: 	
-		Date:	    
+<!--	Author: Kenneth Almas 	
+		Date:	03/08/2025    
 		File:		mileage-log.php
 		Purpose:	
 -->
