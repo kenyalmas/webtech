@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author:
-		Date:
+<!--	Author: Kenneth Almas
+		Date:	03/20/2025
 		File:	bus-travel.php
 		Purpose: Chapter 8 Exercise
 

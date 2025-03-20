@@ -1,0 +1,52 @@
+<!-- 
+Create an HTML form that will allow a user to order plants; 
+in particular tomatoes, peppers, and cucumbers. 
+
+Create a table to display your form in. 
+    Your form should use input type="number" not "text", 
+    it also should include submit and reset buttons. 
+    
+You should use the new CSS and make this look good. 
+This HTML should call your PHP page. 
+Hint: Add value="0" to your number inputs so if you don't fill it out it will send 0 
+(if not there is a PHP error!).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plants</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <table>
+        <form action="plants.php" method="post">
+            <tr>
+                <td><img src="assets/tomato.jpg"></td>
+                <td>Tomatoes</td>
+                <td><input type="number" id="tomatoes" name="tomatoes" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td><img src="assets/hotPepper.jpg"></td>
+                <td>Hot Peppers</td>
+                <td><input type="number" id="hotPeppers" name="hotPeppers"value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td><img src="assets/bellPepper.jpg"></td>
+                <td>Bell Peppers</td>
+                <td><input type="number" id="bellPeppers" name="bellPeppers" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td><img src="assets/cuke.jpg"></td>
+                <td>Cucumbers</td>
+                <td><input type="number" id="cukes" name="cukes" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
