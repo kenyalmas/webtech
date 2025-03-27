@@ -3,13 +3,22 @@
 
 /*  to use a style sheet use this code   <link rel="stylesheet" type="text/css" href="path to file">  */
  body {
-        background: #fffbec;  		/*  page color */
-        font-family: sans-serif;	/*  font choices serif, sans-serif, monospace, cursive, fantasy  */	
+        background: #4f4e4f;  		/*  page color */
+        font-family: monospace;	/*  font choices serif, sans-serif, monospace, cursive, fantasy  */	
         font-size: 16pt;			/*  font size in pt, px or em  */	
     }
+
+div {								/*  all div tags */
+	border-radius: 7px;				/*  rounded corners on div  */
+	background-color: #a651c8;		/*  background color  */
+	max-width: fit-content;			/*  width of div  */
+	margin-left: auto;				/*  margin on left  */
+	margin-right: auto;				/*  margin on right  */
+	margin-bottom: auto;			/*  margin on bottom  */
+	}
    
 h1, h2 {							/*   list mutiple tags with commas to set similar stuff */
-	color: #3333E1;					/*  color  */
+	color: #442d01;					/*  color  */
 	font-size: 20pt;				/*  size of font  */
     }
 
@@ -41,42 +50,20 @@ a:active {
 	color: #ED080C;					/*  while you are clicking link  */
 		}
 
+table {
+	border-top-left-radius: 7px;	/*  rounded corners on table  */
+	border-top-right-radius: 7px;
+	border-collapse: separate;		/*  separate or collapse  */
+	min-height: fit-content;		/*  height of table  */
+	width: 100%;					/*  width of table  */
+	margin: 0 auto;					/*  margin on left and right  */
+	border-spacing: 0;				/*  space between cells  */
+}
+
 table, th, td {						/*   table, th and td tags */
-	border: 1px solid black;		/*   could be dotted, dashed, solid, double, groove, ridge, none  */
-									/*  set each border seperatly use something like:   border-top-style, border-left-style, border-bottom-style, border-top-style */
-	border-radius: 7px;				/*  can set each corner seperatly or this way to do all 4 */
-	
-	border-collapse: collapse;		/*  remove if you want double walls inside table   */
-	border-color: #054E00; 			/*  border color   */
-}
-
-th {
-    text-align: left;				/*   alignment in cells  */
-}
-
-tr:nth-child(even){					/*  Use to format only even rows */
-	background-color: #CFF0C1;
-}
-
-tr:nth-child(odd){					/*  format only odd rows */
-	background-color: #DDDDDD;
-}
-
-input[type=text] {					/*  testboxes */
-    border: 2px solid red;			/*  border - same settings as table */
-    border-radius: 4px;				/*  same as table settings */
-	color: "#000000"; 				/* color in textbox  */
-	background-color: #97DFC4;		/*  color of textboxes */
-}
-
-textarea {							/* this would be a text area, like a comment box  */
-    width: 125px;
-    height: 150px;
-    padding: 12px 20px;
+	text-align: center;				/*  center text in cells  */
     box-sizing: border-box;
-    border: 2px solid #cccccc;
     border-radius: 4px;
-    background-color: #f8f8f8;
     resize: none;
 }
 
@@ -85,13 +72,44 @@ select {							/*  select box or dropdown  */
     padding: 16px 20px;				/* top & bottom, left & right padding   - can do each side seperately  */
     border: none;
     border-radius: 4px;
-    background-color: #f1f1f1;
+    background-color: #466675;
 }
 
 input[type=button], input[type=submit], input[type=reset] {			/*  formatting buttons...specifically submit and reset */
-	background-color: #4CAF50;
+	align-content: center;	
+	border-color: #000000; 			/*  border color   */
+	border-radius: 7px;				/*  rounded corners on cells  */	
+}
+
+td {
+    max-width: 200px; /* Set the desired width of the table cell */
+    max-height: 175px; /* Set the desired height of the table cell */
+    padding: 0; /* Remove padding to ensure the image fills the cell */
+}
+
+tr:nth-child(even){					/*  Use to format only even rows */
+	background-color: #358313;
+}
+
+tr:nth-child(odd){					/*  format only odd rows */
+	background-color: #c9921b;
+}
+
+input[type=text], input[type=number] {					/*  testboxes */
+	align-self: center;			/*  center text in box  */
+    border: 2px solid #358313;			/*  border - same settings as table */
+    border-radius: 4px;				/*  same as table settings */
+	color: "#000000"; 				/* color in textbox  */
+	background-color: #466675;		/*  color of textboxes */
+}
+
+textarea {							/* this would be a text area, like a comment box  */
+    width: 125px;
+    height: 150px;
+    padding: 12px 20px;
+	background-color: #c9921b;
 	border: none;
-	color: white;
+	color: #466675;
 	padding: 10px 15px; /* top & bottom padding     left & right padding */
 	margin: 4px 2px;
 	cursor: pointer;
@@ -100,5 +118,10 @@ input[type=button], input[type=submit], input[type=reset] {			/*  formatting but
 	border-collapse: collapse;
 }
 
-
+img {
+	width: 100%; /* Make the image fill the width of the parent td */
+    height: 100%; /* Make the image fill the height of the parent td */
+    border-radius: 7px; /* Rounded edges */
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
+}
 		

@@ -16,11 +16,17 @@ Hint: Add value="0" to your number inputs so if you don't fill it out it will se
 <head>
     <meta charset="UTF-8">
     <title>Plants</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="./style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <div>
     <table>
         <form action="plants.php" method="post">
+            <tr>
+                <td></td>
+                <td>Name</td>
+                <td><input type="text" id="name" name="name" size="15" required></td>
+            </tr>
             <tr>
                 <td><img src="assets/tomato.jpg"></td>
                 <td>Tomatoes</td>
@@ -48,5 +54,6 @@ Hint: Add value="0" to your number inputs so if you don't fill it out it will se
             </tr>
         </form>
     </table>
+    </div>
 </body>
 </html>
