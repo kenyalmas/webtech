@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author:
-		Date:
+<!--	Author: Kenneth Almas
+		Date:	03/27/2025
 		File:	fuel-costs.php
 		Purpose: Chapter 9 Exercise
 -->
@@ -23,15 +23,15 @@
 		print("<p>CAR MODEL: ".$carModel."<br>");
 		print("<p>Miles Per Gallon: ". $mpg."<br>");
 		print("<p>Fuel Cost Per Gallon: $". number_format($costPerGallon,2)."</p>");
+		print("<table><tr><th>Miles</th><th>Fuel Cost</th></tr>");	
 		
+		for ($miles = 100; $miles <= 1000; $miles = $miles + 100)
+		{
+			$fuelCost = ($miles / $mpg) * $costPerGallon;
+			print("<tr><td>$miles</td><td>$". number_format($fuelCost,2)."</td></tr>");
+		}
 		
-		// Add a table here that uses a FOR loop to display the fuel costs
-		// for 100 to 1000 miles of travel in 100 mile increments
-		// See instructions in the textbook for details.
-	
-
-		
-			
+		print("</table>");
 	?>
 
 </body>

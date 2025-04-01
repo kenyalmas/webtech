@@ -20,6 +20,12 @@
 
 		print ("<h1>SQUARES</h1><hr>");
 
+		for ($i = $startNum; $i <= $endNum; $i = $i + $increment)
+		{
+			$square = $i * $i;
+			print ("$i squared is $square<br>");
+		}
+
 		print ("<hr>");
 	?>
 

@@ -17,6 +17,16 @@
 
 	<?php
 
+	$rainReport = fopen("rainfall2007.txt", "r");
+	$rainAmount = trim(fgets($rainReport));
+	$rainTotal = 0;
+	$months = array("January", "February", "March", "April", "May", "June",
+					 "July", "August", "September", "October", "November", "December");
+
+	foreach ($months as $month)
+	{
+	if ($month == "April" || $month == "May" || $month == "June" || $month == "July" || $month == "August")
+	}
     ?>
 
 </body>
