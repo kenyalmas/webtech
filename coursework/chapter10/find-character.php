@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--Author:
-	Date:
+<!--Author: Kenneth Almas
+	Date:	04/03/2025
 	File:	  find-character.php
 	Purpose:
 	
@@ -29,11 +29,13 @@
 			list($charName, $charType, $healthTokens, $expTokens, $supplyTokens) 
 								= explode (",", $nextLine);
 
+			if ($charName == $searchName) {
 			print ("<h1>$charName the $charType</h1>");
 			print ("<p>$charName has $healthTokens health tokens,
 							$expTokens experience tokens,
 							and $supplyTokens supply tokens,</p>");
-
+			$notFound = false;
+			}
 			$nextLine = trim(fgets($charFile));
 		}
 		fclose ($charFile);

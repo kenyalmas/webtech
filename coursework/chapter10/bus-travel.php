@@ -14,16 +14,40 @@
 
 <body>
 	<?php
+		$runningTotal = 0;
 	
-		// Add your code here to meet the requirements of this exercise
-	
+		$busRecord = fopen("bus-travel.txt", "r");
+		$nextRecord = trim(fgets($busRecord));
 		
-		
-		
-		
+		while (!feof($busRecord)) {
+			list($travelDate, $travelMiles, $breakfast, $lunch, $dinner, $hotel) 
+				= explode(":", $nextRecord);
+			
+			$runningTotal += $travelMiles * 0.35;
+
+			if ($breakfast == "YES") {
+				$runningTotal += 6.00;
+			} 
+
+			if ($lunch == "YES") {
+				$runningTotal += 8.50;
+			}
+
+			if ($dinner == "YES") {
+				$runningTotal += 17.50;
+			}
+
+			if ($hotel == "YES") {
+				$runningTotal += 110.00;
+			}			
+			
+			$nextRecord = trim(fgets($busRecord));
+		}
+
+		fclose($busRecord);
 						
 		print ("<h1>BUSINESS TRAVEL REIMBURSEMENT SUMMARY</h1>");
-		print("<p>Your total reimbursement for this period is $".number_format($grandTotal, 2)."</p>");
+		print("<p>Your total reimbursement for this period is $".number_format($runningTotal, 2)."</p>");
 	?>
 
 </body>

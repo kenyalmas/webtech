@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--Author:
-	Date:
+<!--Author: Kenneth Almas
+	Date:	04/03/2025
 	File:	  software1.php
 	Purpose:	
 -->
@@ -19,6 +19,13 @@
 		$orderFile = fopen("orders.txt", "r");
 		$nextOrder = trim(fgets ($orderFile));
 
+		while( !feof($orderFile) ) {
+			$order = explode(":", $nextOrder);
+			$copies = $order[1];
+			$totalCopies += $copies;
+			$totalOrders++;
+			$nextOrder = trim(fgets ($orderFile));
+		}
 
 		fclose ($orderFile);
 
