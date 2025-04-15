@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author: 
-		Date:	
+<!--	Author: Kenneth Almas 
+		Date:	04/10/2025
 		File:	staff-report2.php
 		Purpose:MySQL Exercise
 -->
@@ -27,7 +27,7 @@ if( !$connect)
 	using user name $user (".mysqli_connect_errno().
 	", ".mysqli_connect_error().")");
 }
-$userQuery = "";
+$userQuery = "SELECT * FROM personnel WHERE jobTitle = 'Manager' OR jobTitle = 'accountant'";
 $result = mysqli_query($connect, $userQuery);
 
 if (!$result) 
@@ -47,6 +47,11 @@ else
 	print("<table>");
 	print("<tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Job Title</th><th>Hourly Wage</th></tr>");
 
+		 while ($row = mysqli_fetch_assoc($result))
+		{
+			print (	"<tr><td>".$row['empID']."</td><td>".$row['firstName']."</td><td>".$row['lastName']."</td><td>".$row['jobTitle']."</td><td>".
+			number_format($row['hourlyWage'], 2)."</td></tr>");
+		}
 	
 	
 	print("</table");

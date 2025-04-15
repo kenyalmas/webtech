@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author: 
-		Date:	
+<!--	Author: Kenneth Almas 
+		Date:	04/10/2025
 		File:	cleaners.php
 		Purpose:MySQL Exercise
 -->
@@ -28,7 +28,7 @@ if( !$connect)
 	", ".mysqli_connect_error().")");
 }
 
-$userQuery = "";  // QUERY NEEDED
+$userQuery = "SELECT MIN(hourlyWage) FROM personnel WHERE jobTitle='cleaner'"; 
 
 $result = mysqli_query($connect, $userQuery);
 
@@ -46,13 +46,13 @@ else
 { 
 	print("<h1>CLEANING STAFF</h1>");
 
-	// CODE HERE..
+	while($row = mysqli_fetch_assoc($result)){
+		$lowestWage = $row["MIN(hourlyWage)"];
+	}
 	
 	print ("<p>The lowest hourly wage of cleaning staff is $".
 				number_format($lowestWage, 2)."</p>");
 }
-
-mysqli_close($connect);   // close the connection
  
 ?>
 

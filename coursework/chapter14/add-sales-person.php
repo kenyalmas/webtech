@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author: 
-		Date:	
+<!--	Author: Kenneth Almas 
+		Date:	04/15/2025
 		File:	add-sale-person.php
 		Purpose:MySQL Exercise
 -->
@@ -32,7 +32,7 @@ $empID = $_POST['empID'];
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 
-$userQuery = ""; // ADD THE QUERY
+$userQuery = "INSERT INTO personnel (empID, firstName, lastName, jobTitle, hourlyWage) VALUES ('$empID', '$firstName', '$lastName', 'sales', '14.25')";
 
 $result = mysqli_query($connect, $userQuery);
 

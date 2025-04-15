@@ -31,7 +31,7 @@ if( !$connect)
 
 $jobTitle = $_POST['jobTitle'];
 
-$userQuery = " ";  // ADD THE QUERY
+$userQuery = "SELECT firstName, lastName FROM personnel WHERE jobTitle = '$jobTitle' ";  // ADD THE QUERY
 
 $result = mysqli_query($connect, $userQuery);
 
@@ -52,6 +52,9 @@ else
 	print("<tr><th>FIRST NAME</th><th>LAST NAME</th></tr>");
 		 
 	// ADD CODE HERE
+	while($row = mysqli_fetch_assoc($result)){
+		print("<tr><td>".$row['firstName']."</td><td>".$row['lastName']."</td></tr>");
+	}
 	
 	print ("</table>");
 }
