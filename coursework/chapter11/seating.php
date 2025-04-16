@@ -35,7 +35,12 @@
 		//	SEAT #14 NEEDS REPAIR and so on..
 		// The loop must also count the number of seats in need of repair
 
-
+		for($i=0; $i < count($seating); $i++) {
+			if ($seating[$i] == "REPAIR") {
+				print ("<p>SEAT #$i NEEDS REPAIR</p>");
+				$count++;
+			}
+		}
 
 
 		print ("<p>$count seats are in need of repair</p>");
