@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flooring Estimate</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Get your flooring estimate!</h1>
+        <div>
+    <form action="calculate.php" method="post">
+        <label for="firstName">First Name
+            <input type="text" id="firstName" name="firstName" size="12"> <br>
+        </label>
+        <label for="lastName">Last Name
+            <input type="text" id="lastName" name="lastName" size="12"> <br>
+        </label>
+        <label for="phoneNumber">Phone Number
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> <br>          
+        </label>
+        <label for="roomLength">Room Length
+            <input type="number" id="roomLength" name="roomLength" size="4"> <br>
+        </label>
+        <label for="roomWidth">Room width
+            <input type="number" id="roomWidth" name="roomWidth" size="4"> <br>
+        </label>
+        <label for="floorType">Floor Type
+            <select id="floorType" name="floorType">
+                <option value="ceramicFloor">Ceramic Tile</option>
+                <option value="carpetFloor">Carpet</option>
+                <option value="woodFloor">Wood Plank</option>
+                <option value="LinoFloor">Linoleum</option>
+            </select> <br>
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+        </div>
+    <a href="report.php">View Report</a>
+    </body>
+</html>
